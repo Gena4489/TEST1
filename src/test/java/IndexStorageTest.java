@@ -24,4 +24,10 @@ class IndexStorageTest {
         assertEquals(-9, arrReverse[0]);
         assertEquals(0, arrReverse[9]);
     }
+
+    @Test
+    void reverseWhenSizeEqZero() {
+        IndexStorage arr = new IndexStorage(0);
+        assertThrows(IllegalArgumentException.class, ()-> arr.reverse());
+    }
 }
